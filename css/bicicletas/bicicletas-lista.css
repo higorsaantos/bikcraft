@@ -1,0 +1,66 @@
+.bicicletas-lista {
+    padding-top: 60px;
+    padding-bottom: 120px;
+}
+
+.bicicletas-lista h2 {
+    margin-bottom: 40px;
+}
+
+.bicicletas-lista a {
+    display: block;
+}
+
+.bicicletas-lista ul {
+    display: flex;
+    gap: 40px;
+    padding: 0 20px 20px 20px;
+    max-width: 1400px; /*vai vazar do conteiner, mas vai segurar em 1400px*/
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto; /*rolagem lateral automática na quebra somente na lista no eixo x*/
+}
+
+.bicicletas-lista li {
+    min-width: 280px; /*definindo o mínimo de largura para não diminuir muito o tamanho do imagem, 280px já é um bom tamanho responsivo pro mobile*/
+    flex: 1;
+}
+
+.bicicletas-lista img {
+    margin-bottom: 16px;
+}
+
+.bicicletas-lista h3 {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    /*display flex + align center para centralizar o elemento ::before mesmo quando o texto quebrar*/
+}
+
+.bicicletas-lista h3::before {
+    content: ""; /*mesmo vazio, tem que ter content para aparecer na tela*/
+    background-color: var(--cor-p01);
+    height: 8px;
+    width: 12px;
+    display: inline-block; /*ficar na mesma linha do h3*/
+    margin-right: 8px;
+    transition: width 0.2s; /*transição somente na largura*/
+}
+
+.bicicletas-lista a:hover h3::before {
+    width: 24px;
+}
+
+.bicicletas-lista li span {
+    padding-left: 20px; /*esse valor de padding é a soma do width + margin do elemento ::before do h3, assim o preço fica centralizado com o nome da bicicleta*/
+}
+
+@media (max-width: 800px) {
+    .bicicletas-lista {
+        padding-bottom: 60px;
+    }
+
+    .bicicletas-lista ul {
+        gap: 20px;
+    }
+}

@@ -1,0 +1,79 @@
+.header-bg {
+    background-color: var(--cor-12);
+  }
+  
+  .header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .header-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .header-menu a {
+    display: inline-block; /*para funcionar o padding quando quebrar o elemento no responisivo*/
+    color: var(--cor-00);
+    padding: 16px 0px; /*aumentar área de contato*/
+    position: relative;
+  }
+  
+  .header-menu a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 0px;
+    background: var(--cor-00);
+    margin-top: 4px;
+    transition: 0.3s;
+  }
+  
+  .header-menu a:hover:after {
+    width: 100%;
+  }
+
+    /*media query*/
+  
+  @media (max-width: 800px) {
+    .header-menu {
+      gap: 20px;
+    }
+  
+    .header-menu a {
+      background-color: var(--cor-11);
+      padding: 12px 16px;
+      border-radius: 4px;
+    }
+  
+    .header-menu a:hover {
+      background-color: var(--cor-10);
+    }
+  
+    .header-menu a::after {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .header {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .header-menu {
+      gap: 12px;
+    }
+  
+    .header-menu a {
+      padding: 8px 12px;
+    }
+  }

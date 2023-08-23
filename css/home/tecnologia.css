@@ -1,0 +1,83 @@
+.tecnologia-bg {
+    background-color: var(--cor-11);
+    box-shadow: inset 0 80px var(--cor-00), inset 0 -80px var(--cor-00); /*para adicionar mais sombras no elemento basta uma "," e ir adicionando mais sombras, no caso a segunda é negativa pois é de baixo pra cima*/
+}
+
+.tecnologia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.tecnologia-imagem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.tecnologia-conteudo {
+    padding-bottom: 160px; /*80px da sombra + 80px do padding*/
+    padding-top: 160px; /*80px da sombra + 80px do padding*/
+}
+
+.tecnologia-conteudo > span {
+    display: block; /*span por padrão é elemento inline e não funciona margem, por isso transforma em block*/
+    margin-bottom: 20px;
+}
+
+.tecnologia-conteudo > h3 {
+    margin-bottom: 32px;
+}
+
+.tecnologia-conteudo > p {
+    margin-bottom: 20px;
+}
+
+.tecnologia-conteudo > a {
+    margin-bottom: 80px;
+}
+
+.tecnologia-vantagens {
+    display: flex;
+    gap: 40px;
+}
+
+.tecnologia-vantagens img {
+    width: 24px;
+    margin-bottom: 8px;
+}
+
+.tecnologia-vantagens h3 {
+    margin-bottom: 8px;
+    width: max-content;
+}
+
+@media (max-width: 800px) {
+.tecnologia-bg {
+    box-shadow: initial;
+}
+
+    .tecnologia {
+        grid-template-columns: 1fr;
+    }
+
+    .tecnologia-conteudo {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .tecnologia-imagem img {
+        display: none;
+    }
+
+    .tecnologia-conteudo > a {
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width:600px) {
+    .tecnologia-vantagens {
+        flex-direction: column;
+    }
+}

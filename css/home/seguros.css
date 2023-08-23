@@ -1,0 +1,70 @@
+.seguros-bg {
+    background-color: var(--cor-11);
+}
+
+.seguros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    gap: 40px;
+    align-items: center; /*alinhamento horizontal dos itens*/
+}
+
+.seguros h2 {
+    grid-column: 1/-1;
+}
+
+.seguros-item {
+    background-color: var(--cor-12);
+    padding: 32px 32px 32px 64px;
+    display: grid;
+    grid-template-columns: 1fr auto; /*segunda coluna terá somente o valor máximo do conteúdo*/
+    border-radius: 5px;
+}
+
+.seguros h3 {
+    margin-bottom: 40px;
+}
+
+.seguros-item span {
+    grid-column: 2;
+    display: block;
+    text-align: right;
+}
+
+.seguros-item ul {
+    grid-column: 1/-1;
+    margin-bottom: 32px;
+}
+
+.seguros-item li + li { /*somente a li seguido de li*/
+    margin-top: 20px;
+}
+
+.seguros-item li {
+    display: flex;
+    align-items: center; /*alinhar texto e elemento ::before*/
+    position: relative;
+}
+
+.seguros-item li::before {
+    content: "";
+    display: inline-block; /*elemento em linha*/
+    width: 13px;
+    height: 9px;
+    background-image: url(../../img/icones/lista.svg); /*.. para voltar pasta*/
+    position: absolute;
+    left: -21px; /*13px da largura do elemento + 8px de distancia da lista*/
+}
+
+.seguros a {
+    grid-column: 1/-1;
+    max-width: max-content;
+}
+
+@media(max-width: 800px) {
+    .seguros {
+        grid-template-columns: 1fr;
+    }
+}

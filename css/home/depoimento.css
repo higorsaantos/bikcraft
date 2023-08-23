@@ -1,0 +1,60 @@
+.depoimento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--cor-p01);
+    overflow: hidden; /*quando o conteúdo estourar, é escondido e não gera barra de rolagem lateral*/
+}
+
+.depoimento img {
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*cortar a imagem*/
+}
+
+.depoimento-conteudo {
+    padding: 40px 40px 80px 80px; /*40px pra cima e pra direita, 80px pra baixo e pra esquerda*/
+    align-self: end; /*alinhar sempre ao final*/
+}
+
+.depoimento-conteudo p {
+    max-width: 32ch; /*tamanho máximo de 32 caracteres*/
+    font-family: "Merriweather", sans-serif;
+    font-style: italic;
+    font-weight: 900;
+    margin-bottom: 32px;
+    position: relative; /*para poder posicionar os elementos after e before*/
+}
+
+.depoimento-conteudo p::before,
+.depoimento-conteudo p::after {
+    color: var(--cor-p02);
+    position: absolute;
+    font-size: 5rem;
+}
+
+.depoimento-conteudo p::before {
+    content: "“"; /*aspas verdadeiras, não são as do teclado*/
+    left: -50px;
+    top: -20px;
+}
+
+.depoimento-conteudo p::after {
+    content: "”"; /*aspas verdadeiras, não são as do teclado*/
+}
+
+@media(max-width:800px) {
+    .depoimento {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .depoimento-conteudo {
+        padding: 20px 20px 40px 40px;
+        justify-self: center;
+    }
+
+    .depoimento img {
+        max-height: 200px;
+    }
+}
