@@ -1,0 +1,118 @@
+.bicicletas-bg {
+    background-image: linear-gradient(to right, var(--cor-00) 30%, var(--cor-11) 0%);
+}
+
+.bicicletas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.bicicletas-imagem {
+    display: grid;
+    /* Posicionar o span com position */
+        /* position: relative; */
+}
+
+.bicicletas-imagem img {
+    grid-area: 1/1;
+}
+
+.bicicletas-imagem span {
+    background-color: var(--cor-12);
+    padding: 8px 16px 8px 8px;
+    display: inline-block;
+    grid-area: 1/1;
+    place-self: start end;
+    margin-top: 20px;
+    border-radius: 4px 0px 0px 4px;
+    /* Posicionar o span com position */
+        /* position: absolute;
+        top: 20px;
+        right: 0px; */
+}
+
+.bicicletas-conteudo {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-content: start; /*alinhar o conteúdo ao começo*/
+}
+
+.bicicletas-conteudo h2,
+.bicicletas-conteudo p {
+    grid-column: 1/-1;
+}
+
+.bicicletas-conteudo h2 {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.bicicletas-conteudo h2::before {
+    content: "";
+    width: 12px;
+    height: 8px;
+    background: var(--cor-p01);
+    /* position: absolute; */ /*não precisa pra esse caso, somente block*/
+    display: block;
+    margin-bottom: 8px;
+}
+
+.bicicletas-conteudo p {
+    margin-bottom: 32px;
+}
+
+.bicicletas-conteudo a {
+    place-self: end;
+}
+
+.bicicletas-conteudo ul {
+    display: grid; /*somente assim nada muda, mas ativa recurso gap*/
+    gap: 16px;
+}
+
+/* .bicicletas-conteudo li + li {
+    margin-top: 16px;
+}  uma segunda forma de distanciar a img dos ícones do texto*/
+
+
+.bicicletas-conteudo li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.bicicletas-conteudo img {
+    width: 24px;
+    /*poderia usar ao invés do gap na li, o margin-right 8px*/
+}
+
+@media(max-width: 800px) {
+.bicicletas-bg {
+    background: var(--cor-11);
+}
+
+    .bicicletas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+@media(max-width: 600px) {
+    .bicicletas-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .bicicletas-conteudo ul {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 32px;
+    }
+
+    .bicicletas-conteudo a {
+        place-self: start;
+    }
+}

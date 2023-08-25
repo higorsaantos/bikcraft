@@ -13,6 +13,7 @@
 
 /*Bicicletas*/
 @import url(./bicicletas/bicicletas-lista.css);
+@import url(./bicicletas/bicicletas.css);
 
 /*Tecnologia*/
 @import url(./home/tecnologia.css);
@@ -25,3 +26,6 @@
 
 /*Seguros*/
 @import url(./home/seguros.css);
+
+/*Termos*/
+@import url(./termos/termos.css);
