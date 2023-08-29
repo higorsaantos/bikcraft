@@ -11,6 +11,10 @@
     align-items: center; /*alinhamento horizontal dos itens*/
 }
 
+#seguros .seguros {
+    padding-top: 0px;
+}
+
 .seguros h2 {
     grid-column: 1/-1;
 }
@@ -20,7 +24,7 @@
     padding: 32px 32px 32px 64px;
     display: grid;
     grid-template-columns: 1fr auto; /*segunda coluna terá somente o valor máximo do conteúdo*/
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .seguros h3 {

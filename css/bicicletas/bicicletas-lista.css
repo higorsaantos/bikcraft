@@ -21,6 +21,10 @@
     overflow-x: auto; /*rolagem lateral automática na quebra somente na lista no eixo x*/
 }
 
+#bicicleta .bicicletas-lista ul {
+    padding: 0px 0px 20px 0px;
+}
+
 .bicicletas-lista li {
     min-width: 280px; /*definindo o mínimo de largura para não diminuir muito o tamanho do imagem, 280px já é um bom tamanho responsivo pro mobile*/
     flex: 1;

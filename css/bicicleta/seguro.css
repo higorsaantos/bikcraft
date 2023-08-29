@@ -1,0 +1,52 @@
+.seguro-bg {
+    background-color: var(--cor-11);
+    box-shadow: inset 0 120px var(--cor-00), inset 0 -120px var(--cor-12);
+    /*inset sombra interna
+    0px no eixo x e 120px no eixo y
+    e o último valor seria a cor*/
+}
+
+.seguro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.seguro-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.seguro-conteudo {
+    padding-top: 180px; /*soma do box-shadow + padding 60px figma*/
+    padding-bottom: 180px; /*soma do box-shadow + padding 60px figma*/
+}
+
+.seguro-conteudo h2 {
+    margin-bottom: 32px;
+}
+
+.seguro-conteudo p {
+    margin-bottom: 20px;
+}
+
+@media(max-width: 800px) {
+    .seguro-bg {
+        background-color: var(--cor-11);
+        box-shadow: inset 0 -60px var(--cor-12); /*apenas a box-shadow abaixo*/
+    }
+    .seguro {
+        grid-template-columns: 1fr;
+    }
+
+    .seguro-imagem img {
+        height: 400px;
+    }
+
+    .seguro-conteudo {
+        grid-row: 1;
+        padding-top: 40px;
+        padding-bottom: 0px; /*porque já tem gap de 40px*/
+    }
+}
