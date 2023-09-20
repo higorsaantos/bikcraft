@@ -36,7 +36,8 @@
     transition: 0.3s;
   }
   
-  .header-menu a:hover:after {
+  .header-menu a:hover::after, /*quando o <a> estiver em hover, adicionar no after...*/
+  .header-menu a.ativo::after { /*quando o <a> tiver a classe 'ativo', adicionar no after...*/
     width: 100%;
   }
 

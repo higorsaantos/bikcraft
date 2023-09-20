@@ -1,0 +1,1 @@
+-> carregar imagens menores no picture com <source media>
